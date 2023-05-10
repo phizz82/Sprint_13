@@ -22,6 +22,10 @@ module.exports = {
         loader: 'babel-loader', 
         exclude: /node_modules/ 
       },
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
       // Now we apply a rule for images
       {
         test: /\.(png|jpe?g|gif|svg)$/,
