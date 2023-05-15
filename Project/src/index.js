@@ -1,6 +1,10 @@
 import "./styles.scss";
 import "./background.scss";
 
+if (process.env.NODE_ENV !== 'production') {
+  console.log('Looks like we are in development mode!');
+}
+
 class Mortgage {
   constructor(principal, years, rate) {
     this.principal = principal;
